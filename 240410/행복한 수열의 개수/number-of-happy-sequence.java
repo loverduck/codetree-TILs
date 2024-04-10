@@ -22,22 +22,30 @@ public class Main {
 		int count = 1;
 		for(int i = 0; i < n; i++) {
 			st = new StringTokenizer(br.readLine());
+			for(int j = 0; j < n; j++) {
+				map[i][j] = Integer.parseInt(st.nextToken());
+			}
+		}		
+		
+		for(int i = 0; i < n; i++) {
 			preNum = 0;
 			count = 1;
 			for(int j = 0; j < n; j++) {
-				map[i][j] = Integer.parseInt(st.nextToken());
-				if(preNum == map[i][j]) count++;
+				if(preNum == map[i][j]) {
+					count++;
+					
+				}
 				else {
 					preNum = map[i][j];
 					count = 1;
 				}
+				if(count >= m) {
+					result++;
+					break;
+				};
 			}
 			
-			if(count >= m) result++;
-		}
-		
-		
-		for(int i = 0; i < n; i++) {
+			
 			preNum = 0;
 			count = 1;
 			for(int j = 0; j < n; j++) {
