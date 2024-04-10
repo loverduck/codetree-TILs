@@ -35,8 +35,6 @@ public class Main {
 			
 			if(count >= m) result++;
 		}
-
-        
 		
 		
 		for(int i = 0; i < n; i++) {
@@ -51,10 +49,12 @@ public class Main {
 					preNum = map[j][i];
 					count = 1;
 				}
+				if(count >= m) {
+					result++;
+					break;
+				};
 			}
-			if(count >= m) {
-				result++;
-			};
+			
 			
 		}
 		System.out.println(result);
