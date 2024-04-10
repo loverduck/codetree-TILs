@@ -35,6 +35,8 @@ public class Main {
 			
 			if(count >= m) result++;
 		}
+
+        
 		
 		
 		for(int i = 0; i < n; i++) {
