@@ -36,17 +36,24 @@ public class Main {
 			if(count >= m) result++;
 		}
 		
-		preNum = 0;
-		count = 1;
+		
 		for(int i = 0; i < n; i++) {
+			preNum = 0;
+			count = 1;
 			for(int j = 0; j < n; j++) {
-				if(preNum == map[j][i]) count++;
+				if(preNum == map[j][i]) {
+					count++;
+					if(count >= m) {
+						result++;
+						break;
+					};
+				}
 				else {
 					preNum = map[j][i];
 					count = 1;
 				}
 			}
-			if(count >= m) result++;
+			
 		}
 		System.out.println(result);
 	}
