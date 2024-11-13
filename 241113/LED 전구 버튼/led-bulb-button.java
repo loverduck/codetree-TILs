@@ -8,7 +8,7 @@ public class Main {
         StringBuilder out = new StringBuilder();
 
         int n = Integer.parseInt(st.nextToken());
-        int b = Integer.parseInt(st.nextToken());
+        long b = Integer.parseInt(st.nextToken());
 
         int[] lights = new int[n];
 
@@ -16,7 +16,7 @@ public class Main {
             lights[i] = Integer.parseInt(br.readLine());
         }
 
-        for(int i = 0; i < b; i++) {
+        for(long i = 0; i < b; i++) {
             int[] newLights = new int[n];
             newLights[0] = lights[n - 1] == 1 ? ( lights[0] == 1 ? 0 : 1) : lights[0];
             for(int j = 1; j < n; j++) {
