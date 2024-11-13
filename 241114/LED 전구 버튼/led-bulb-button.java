@@ -46,14 +46,10 @@ public class Main {
             idx++;
         }
 
-        if(result == 0) {
-            for(int i = 0; i < n; i++) {
-                out.append(0).append("\n");
-            }
-        } else {
-            for(char c: Integer.toBinaryString(result).toCharArray()) {
-                        out.append(c).append("\n");
-            }   
+        
+        String str = String.format("%" + n + "s", Integer.toBinaryString(result)).replace(' ', '0');
+        for(char c: str.toCharArray()) {
+            out.append(c).append("\n");
         }
 
         System.out.println(out);
